@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: header_route
+          uri: https://www.cnn.com
+          predicates:
+            - Path=/asia
+  application:
+    name: app
+#          filters:
+logging:
+  level:
+    ord.springframework.web.client: debug
+#            - AddRequestHeader=X-Request-red, blue
